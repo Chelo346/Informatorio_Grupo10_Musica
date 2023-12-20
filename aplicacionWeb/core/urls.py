@@ -5,5 +5,7 @@ from . import views
 
 urlpatterns = [
     path('index/', views.indexview, name='index'),
-    path('publicaciones/', views.publicacionesView, name='publicaciones'),
+    
+    #Include
+    path('publicaciones/', include('publicaciones.urls')),
 ]
