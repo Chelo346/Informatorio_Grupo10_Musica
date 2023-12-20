@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from .models import Publicaciones
 from .forms import CrearPublicacionForm
 from django.urls import reverse
@@ -21,6 +21,14 @@ class VerPublicaciones(ListView):
 class Postear(CreateView):
     model = Publicaciones
     template_name = 'publicaciones/postear.html'
+    form_class = CrearPublicacionForm
+    
+    def get_success_url(self):
+        return reverse('publicaciones:publicaciones')
+    
+class EditarPost(UpdateView):
+    model = Publicaciones
+    template_name = 'publicaciones/editar-post.html'
     form_class = CrearPublicacionForm
     
     def get_success_url(self):
