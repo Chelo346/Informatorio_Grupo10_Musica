@@ -22,6 +22,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    #urls de la aplicacion posts
-    path("posts/", include("apps.posts.urls"))
+    path("", include('core.urls')),
 ]

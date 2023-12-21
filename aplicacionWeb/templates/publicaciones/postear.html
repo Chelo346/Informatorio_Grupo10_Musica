@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+    <H2>Publicar</H2>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-success">Publicar</button>
+
+    </form>
+    <a href="{% url 'publicaciones:publicaciones' %}" class="btn btn-primary">Volver</a>
+    
+{% endblock contenido %}
+
+    
