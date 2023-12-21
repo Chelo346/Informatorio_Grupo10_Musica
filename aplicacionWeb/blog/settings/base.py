@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.posts',
     'core',
     'publicaciones',
+    'usuarios',
 ]
 
 MIDDLEWARE = [
@@ -74,17 +75,14 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 
 
-# para usar bd mysql (pip install mysqlclient)
-# DATABASES = {
-#     "default":{
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "nombreBD",
-#         "USER": "root",
-#         "PASSWORD": "1234",
-#         "HOST": "localhost",
-#         "PORT": "3604",
-#     }
-# }
+# VARIABLES DEL LOGIN
+
+LOGIN_URL = 'login/'
+LOGIN_REDIRECT_URL = '../../index/'
+
+
+#Indicamos que usamos un modelo propio
+AUTH_USER_MODEL = 'usuarios.Usuario'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
