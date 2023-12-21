@@ -18,4 +18,7 @@ from django.shortcuts import render
 # Cada vez que agrego una funcion nueva tiene que ser llamado desde url.
 def saludo(request):
     return render(request, "index.html")
+<<<<<<< HEAD
 >>>>>>> main:aplicacionWeb/blog/views.py
+=======
+>>>>>>> bfe200699467f6e62f4021d085228feae5ec20cb

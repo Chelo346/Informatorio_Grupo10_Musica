@@ -26,6 +26,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
 <<<<<<< HEAD:aplicacionWeb/blog/blog/urls.py
     path("", views.saludo, name='saludo'),
     path("despedir/", views.despedida, name='despedir'),
@@ -33,4 +34,8 @@ urlpatterns = [
 =======
     path("", views.saludo, name="saludo"),
 >>>>>>> main:aplicacionWeb/blog/urls.py
+=======
+    
+    path("", include('core.urls')),
+>>>>>>> bfe200699467f6e62f4021d085228feae5ec20cb
 ]
