@@ -13,6 +13,7 @@
           <h5 class="card-title">{{ post.titulo }}</h5>
           <p class="card-text">{{ post.post }}</p>
           <a href="{% url 'publicaciones:editar-posteo' post.id %}" class="btn btn-primary">Editar</a>
+          <a href="{% url 'publicaciones:eliminar-posteo' post.id %}" class="btn btn-danger">Eliminar</a>
           <h6 class="card-text"> {{ post.fecha }}</h6>
         </div>
     </div>
