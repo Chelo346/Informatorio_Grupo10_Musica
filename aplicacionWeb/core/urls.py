@@ -8,4 +8,5 @@ urlpatterns = [
     
     #Include
     path('publicaciones/', include('publicaciones.urls')),
+    path('usuarios/', include('usuarios.urls') )
 ]
