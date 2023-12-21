@@ -4,7 +4,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('index/', views.indexview, name='index'),
+    path('', views.indexview, name='index'),
     
     #Include
     path('publicaciones/', include('publicaciones.urls')),
