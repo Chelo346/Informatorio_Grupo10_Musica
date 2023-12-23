@@ -13,6 +13,7 @@ class Categorias(models.Model):
 class Publicaciones(models.Model):
     fecha = models.DateField(auto_now_add=True)
     titulo = models.CharField(max_length = 255)
+    subtitulo = models.CharField(max_length = 255, null=True)
     post = models.TextField()
     categoria = models.ForeignKey(Categorias, on_delete=models.SET_NULL, related_name='posteos', null=True)
     
