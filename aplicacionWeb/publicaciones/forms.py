@@ -4,4 +4,10 @@ from .models import Publicaciones
 class CrearPublicacionForm(ModelForm):
     class Meta:
         model = Publicaciones
-        fields = ['fecha', 'titulo', 'post']
+        fields = ['categoria','titulo', 'post']
+        
+        labels = {
+            'categoria': 'Selecciona una Categoria',
+            'titulo':'',
+            'post':''
+        }
