@@ -10,11 +10,14 @@
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{ post.titulo }}</h5>
-          <p class="card-text">{{ post.post }}</p>
-          <a href="{% url 'publicaciones:editar-posteo' post.id %}" class="btn btn-primary">Editar</a>
-          <a href="{% url 'publicaciones:eliminar-posteo' post.id %}" class="btn btn-danger">Eliminar</a>
-          <h6 class="card-text"> {{ post.fecha }}</h6>
+            <h1 class="card-title">{{ post.titulo }}</h1>
+            <h5 class="card-title">{{ post.subtitulo }}</h5>
+            <p class="card-text">{{ post.post }}</p>
+          
+            <a href="{% url 'publicaciones:editar-posteo' post.id %}" class="btn btn-primary">Editar</a>
+            <a href="{% url 'publicaciones:eliminar-posteo' post.id %}" class="btn btn-danger">Eliminar</a>
+            <h6 class="card-text"> {{ post.fecha }} <h5>Categoria:</h5>{{ post.categoria }}</h6>
+            
         </div>
     </div>
     
