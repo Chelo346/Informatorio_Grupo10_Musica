@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block contenido %}
 <body>
 <h1>Titulo del blog</h1>
-</body>  
+
+<img src="{% static 'img/montanas.jpg' %}" alt="">
+  
 {% endblock contenido %}
   
