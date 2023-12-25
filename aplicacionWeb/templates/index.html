@@ -22,10 +22,13 @@
 </html>
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block contenido %}
 
 <h1>Titulo del blog</h1>
+
+<img src="{% static 'img/montanas.jpg' %}" alt="">
   
 {% endblock contenido %}
   
