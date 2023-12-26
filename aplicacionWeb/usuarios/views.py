@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView
 from .models import Usuario
 from .forms import RegistroForm
 from django.urls import reverse
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 # Create your views here.
 
@@ -22,4 +22,4 @@ class RegistroView(CreateView):
         usuario = form.save()
         login(self.request, usuario)
         return respuesta
-        
+          
