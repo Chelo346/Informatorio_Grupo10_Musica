@@ -1,4 +1,63 @@
-.img-auto {
+img-auto {
     max-width: 100%;
     height: auto;
 }
+
+body {
+    background-color: rgba(0, 0, 0, 0.846);
+    color: white;
+}
+
+img {
+    max-width: 600px;
+}
+
+.card-title {
+    margin: auto;
+    border: 1px solid white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+.card {
+    margin-left: 100px;
+}
+
+.card-title {
+    text-align: justify;
+}
+usuario {
+    font-weight: bold;
+    color: blue;
+}
+
+fecha {
+    color: slategrey;
+    font-size: small;
+}
+
+
+/* Estilo para todos los campos de formulario */
+/* .login input,
+.login select,
+.login textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} */
+
+/* .registro input,
+.registro select,
+.registro textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} */
