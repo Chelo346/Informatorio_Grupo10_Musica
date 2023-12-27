@@ -14,7 +14,7 @@ class Publicaciones(models.Model):
     titulo = models.CharField(max_length = 255)
     post = models.TextField()
     fecha = models.DateField(auto_now_add=True)
-    imagen = models.ImageField(default="default")
+    imagen = models.ImageField(upload_to="posts")
     subtitulo = models.CharField(max_length = 255, null=True)
     categoria = models.ForeignKey(Categorias, on_delete=models.SET_NULL, related_name='posteos', null=True)
     
