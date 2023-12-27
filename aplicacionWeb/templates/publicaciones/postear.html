@@ -3,7 +3,7 @@
 
 {% block contenido %}
     <H2>Publicar</H2>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{ form.as_p }}
