@@ -13,3 +13,15 @@ class CrearPublicacionForm(ModelForm):
             'post':'',
             'imagen':'',
         }
+
+'''CLASE CREAR COMENTARIO (REVISAR)
+
+class CrearComentarioForm(ModelForm):
+    class Meta:
+        model = Publicaciones
+        fields = ['comentario']
+        
+        labels = {
+            'comentario': 'Realiza un comentario',
+        }
+'''

@@ -22,3 +22,15 @@ class Publicaciones(models.Model):
         return self.titulo
     
 
+'''PARA LA FUNCIÓN DE COMENTAR PUBLICACIONES (REVISAR)
+class Publicacion(models.Model):
+    titulo = models.CharField(max_length=200)
+    contenido = models.TextField()
+
+    def __str__(self):
+        return self.titulo
+    
+class Comentario(models.Model):
+    publicacion = models.ForeignKey(Publicacion, on_delete=models.CASCADE)
+    texto = models.TextField()
+'''

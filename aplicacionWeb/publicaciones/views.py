@@ -7,6 +7,11 @@ from .forms import CrearPublicacionForm
 from django.urls import reverse
 # Create your views here.
 
+'''FUNCION COMENTAR (REVISAR)
+from .models import Publicacion, Comentario
+from django.shortcuts import redirect
+'''
+
 class VerPublicaciones(ListView):
     model = Publicaciones
     template_name = 'publicaciones/publicaciones.html'
@@ -16,6 +21,16 @@ class VerPublicaciones(ListView):
         consulta_anterior = super().get_queryset()
         consulta_ordenada = consulta_anterior.order_by('fecha')
         return consulta_ordenada
+    
+    '''FUNCIÓN CREAR COMENTARIO AGREGADA (REVISAR)
+    def comentario_create(request, publicacion_id):
+        if request.method == 'POST':
+            texto = request.POST['texto']
+            publicacion = Publicacion.objects.get(id=publicacion_id)
+            comentario = Comentario(publicacion=publicacion, texto=texto)
+            comentario.save()
+            return redirect('publicaciones:post_realizado', publicacion_id=publicacion_id)
+            '''
 
 
 class Postear(CreateView):
@@ -42,7 +57,7 @@ class EliminarPost(DeleteView):
         return reverse('publicaciones:publicaciones')
     
 
-''' Agregar línea de comentarios
+''' Agregar línea de comentarios'''
 class PostRealizado(UpdateView):
     template_name = 'publicaciones/publicaciones.html'
 
@@ -68,4 +83,10 @@ class PostRealizado(UpdateView):
         context["posteos"] = posteos
         context["categorias"] = categorias
         return context
+
+
+''' FUNCIÓN COMENTAR (REVISAR)
+class Publicaciones(ListView):
+    model = Publicacion
+    template_name = 'publicaciones/post_realizado.html'
 '''
