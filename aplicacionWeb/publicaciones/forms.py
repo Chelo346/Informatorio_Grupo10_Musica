@@ -8,8 +8,8 @@ class CrearPublicacionForm(ModelForm):
         
         labels = {
             'categoria': 'Selecciona una Categoria',
-            'titulo':'',
-            'subtitulo':'',
-            'post':'',
-            'imagen':'',
+            'titulo':'Titulo',
+            'subtitulo':'Subtitulo',
+            'post':'Posteo',
+            'imagen':'Selecciona una Imagen',
         }
