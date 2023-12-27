@@ -78,7 +78,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # VARIABLES DEL LOGIN
 
 LOGIN_URL = 'login/'
-LOGIN_REDIRECT_URL = '../../index/'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
 
 
 #Indicamos que usamos un modelo propio
@@ -128,4 +129,13 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+<<<<<<< HEAD
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+=======
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+>>>>>>> aee1b4fd0e0c1a1ea9ebd2872b05184f9766ff76
