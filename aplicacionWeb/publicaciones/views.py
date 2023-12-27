@@ -40,3 +40,32 @@ class EliminarPost(DeleteView):
     
     def get_success_url(self):
         return reverse('publicaciones:publicaciones')
+    
+
+''' Agregar línea de comentarios
+class PostRealizado(UpdateView):
+    template_name = 'publicaciones/publicaciones.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        id_categoria = self.request.GET.get("id", None)
+        antiguedad = self.request.GET.get("orden", None)
+        alfabetico = self.request.GET.get("orden", None)
+
+        if id_categoria:
+            posteos = Post.objects.filter(categoria_post=id_categoria)
+        else:
+            if antiguedad == "asc":
+                posteos = Post.objects.all().order_by("fecha_creacion")
+            elif alfabetico == "a":
+                posteos = Post.objects.all().order_by("titulo")
+            elif alfabetico == "z":
+                posteos = Post.objects.all().order_by("-titulo")
+            else:
+                posteos = Post.objects.all().order_by("-fecha_creacion")
+
+        categorias = Categoria.objects.all()
+        context["posteos"] = posteos
+        context["categorias"] = categorias
+        return context
+'''
