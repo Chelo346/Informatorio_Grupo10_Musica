@@ -7,8 +7,8 @@
 
 {% for post in posteos %}
     
-    <div class="card" style="width: auto;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;">
+        <img src="{{post.imagen.url}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h1 class="card-title">{{ post.titulo }}</h1>
             <h5 class="card-title">{{ post.subtitulo }}</h5>
