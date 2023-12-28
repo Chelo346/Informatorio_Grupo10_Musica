@@ -1,4 +1,4 @@
-local.py
+#local.py
 *.pyc
 entorno
 media
