@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+
+{% block titulo %}
+<title>Posteos</title>
+{% endblock titulo %}
+
+{% block contenido %}
+
+<!-- INICIO DROPDOWN -->
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Categorias
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="{% url 'posts:post_realizado' %}">Todas</a></li>
+        {% for categoria in categorias %}
+        <li><a class="dropdown-item" href="?id={{categoria.pk}}"> {{categoria.nombre}}</a></li>
+        {% endfor %}
+    </ul>
+    <a class="btn btn-secondary" href="?orden=asc">ASC</a>
+    <a class="btn btn-secondary" href="?orden=desc">DESC</a>
+    <a class="btn btn-secondary" href="?orden=a">A-Z</a>
+    <a class="btn btn-secondary" href="?orden=z">Z-A</a>
+</div>
+<!-- FIN DROPDOWN -->
+
+
+
+{% for post in posteos %}
+<br>
+
+<div class="card text-bg-secondary mb-3--bs-warning-border-subtle" style="max-width: 1080px;">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <img src="{{ post.imagen.url }}" class="img-fluid rounded-start" alt="nohay">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.titulo }}</h5>
+                <p class="card-text">{{ post.cuerpo|truncatechars:30 }} <a
+                        href="{% url 'posts:post_detail' post.pk %}">Seguir leyendo..</a></p>
+                <p class="card-text"><small class="text-body-secondary">{{ post.fecha_creacion}}
+                    </small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock contenido %}
