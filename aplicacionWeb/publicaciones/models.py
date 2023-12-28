@@ -1,4 +1,5 @@
 from django.db import models
+from usuarios.models import Usuario
 
 # Create your models here.
 
@@ -20,5 +21,15 @@ class Publicaciones(models.Model):
     
     def __str__(self):
         return self.titulo
+    
+
+class Comentarios(models.Model):
+    texto = models.TextField()
+    fecha = models.DateField(auto_now_add=True)
+    relacion_post = models.ForeignKey(Publicaciones, on_delete=models.CASCADE, related_name='comentarios')
+    autor = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='comentario_usuario')
+    
+    def __str__(self):
+        return self.relacion_post.titulo + '' + self.autor.first_name + '' + self.autor.last_name
     
 
