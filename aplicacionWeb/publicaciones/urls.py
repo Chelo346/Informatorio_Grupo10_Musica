@@ -9,3 +9,12 @@ urlpatterns = [
     path('editar-post/<int:pk>', views.EditarPost.as_view(), name='editar-posteo'),
     path('eliminar-post/<int:pk>', views.EliminarPost.as_view(), name='eliminar-posteo')
 ]
+
+'''Nueva función comentar (REVISAR)
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('publicaciones/', Publicaciones.as_view(), name='post_realizado'),
+]
+'''
