@@ -25,7 +25,7 @@ def home_post(request):
 def post(request):
     return render(request, "post.html")
 
-@login_required
+
 def post_realizado(request):
     # posteos = Post.objects.all()  # selec * from Post
     # categorias = Categoria.objects.all()
