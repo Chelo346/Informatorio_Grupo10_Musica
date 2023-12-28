@@ -1,11 +1,16 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .models import Publicaciones
 from .forms import CrearPublicacionForm
 from django.urls import reverse
 # Create your views here.
+
+'''Para función post_detail'''
+#Import get_objet (sirve para saber si no se encuentra un objeto en nuestro directorio)
+from django.shortcuts import get_object_or_404
+
 
 '''FUNCION COMENTAR (REVISAR)
 from .models import Publicacion, Comentario
@@ -57,7 +62,15 @@ class EliminarPost(DeleteView):
         return reverse('publicaciones:publicaciones')
     
 
-''' Agregar línea de comentarios'''
+class Post_detail(DetailView):
+    model = Publicaciones
+    template_name = 'publicaciones/post-detail.html'
+    
+    def get_success_url(self):
+        return reverse('publicaciones:publicaciones')
+    
+
+''' (Agregar línea de comentarios en este código)'''
 class PostRealizado(UpdateView):
     template_name = 'publicaciones/publicaciones.html'
 
@@ -90,3 +103,9 @@ class Publicaciones(ListView):
     model = Publicacion
     template_name = 'publicaciones/post_realizado.html'
 '''
+'''FUNCIÓN POST_DETAIL'''
+def post_detail(request, post_id):
+    # traer el post con id y si no lo encuentra error 404
+    post = get_object_or_404(Publicaciones, pk=post_id)
+    ctx = {"publicaciones": publicaciones}
+    return render(request, "publicaciones/post-detail.html", ctx)

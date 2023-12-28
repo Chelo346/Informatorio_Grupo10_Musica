@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+
+<title>publicaciones: detalle</title>
+{% endblock titulo %}
+
+{% block contenido %}
+<<img src="{{posts.imagen.url}}" alt="nota">
+<br>
+<h1>{{publicaciones.titulo}}</h1>
+</br>
+<h4>{{publicaciones.fecha_creacion}}</h4>
+<p>{{publicaciones.contenido|linebreaks}}</p>
+{% endblock contenido %}
+    
