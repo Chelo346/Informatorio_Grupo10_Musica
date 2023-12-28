@@ -6,6 +6,7 @@ from .forms import FormularioRegistro
 
 # importamos menssages para enviar un aviso
 from django.contrib import messages
+#comentario
 
 
 def registro(request):

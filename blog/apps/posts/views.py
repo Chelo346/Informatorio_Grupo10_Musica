@@ -14,7 +14,7 @@ from django.views.generic import DeleteView, UpdateView, CreateView
 from .forms import Formulario_Modificacion, Form_Post
 
 #función para crear publicación desde usuario común
-from django.contrib.auth.decorators import login_required
+#from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -25,7 +25,7 @@ def home_post(request):
 def post(request):
     return render(request, "post.html")
 
-@login_required
+
 def post_realizado(request):
     # posteos = Post.objects.all()  # selec * from Post
     # categorias = Categoria.objects.all()

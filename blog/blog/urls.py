@@ -14,9 +14,9 @@ from . import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("contacto/", views.contacto),
-    path("acerca_de/", views.acerca_de),
+    path("acerca_de/", views.acerca_de, name="acerca_de"),
     
-    # #############################################################
+    # 
     # Urls de la aplicacion posts
     path("", include("apps.posts.urls")),
     # urls de otra app
@@ -32,3 +32,4 @@ urlpatterns = [
     # urls para el registro de usuarios
     path("usuarios/", include("apps.usuarios.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

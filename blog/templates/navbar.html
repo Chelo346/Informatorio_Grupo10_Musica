@@ -14,7 +14,7 @@
                 <li><a href="{% url 'admin:index' %}" class="nav-link px-2 text-white">Admin</a></li>
                 <li><a href="{% url 'posts:cargar_post' %}" class="nav-link px-2 text-white">Cargar Post</a></li>
                 {% endif%}
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                <li><a href="{% url 'acerca_de' %}" class="nav-link px-2 text-white">About</a></li>
             </ul>
             <div class="text-end">
                 {% if user.is_authenticated %}
