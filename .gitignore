@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 
 entorno
+=======
+#local.py
+*.pyc
+entorno
+media
+>>>>>>> 22b0fbae35aae288d2314b611f3efb30586647c5

@@ -8,4 +8,3 @@ class Usuario(AbstractUser):
     domicilio = models.CharField(max_length = 255, blank = True, null = True)
     es_admin = models.BooleanField(default=False)
 
-
