@@ -1,12 +1,19 @@
 {% extends 'base.html'%}
 
+
 {% block titulo %}
 <title>Acerca de</title>
 {% endblock titulo %}
 
 {% block contenido %}
 <h1> Acerca de nosotros </h1>
-<p> Gracias por visitar nuestro blog, en el mismo puedes 
+<br>
+<div style="text-align: center;">
+    <img src="{% load static %}{% get_media_prefix %}posts/Acerca_de_nosotros.jpg" alt="Texto alternativo">
+    
+</div>
+<br>
+<p style="color: black; text-align: justify; font-size: 20px;"> Gracias por visitar nuestro blog, en el mismo puedes 
     Este blog fue realizado por estudiantes del curso de Desarrollo Web, Informatorio: Gonzalez Luis, Ocampo Marcelo y Pérez de Eulate Gonzalo.
     El mismo tenía como objetivo desenvolvernos con el lenguaje de programación, Python; y el framework, Django.
     Queremos agradecer a todos nuestros profesores y mentores, quienes se empeñaron en motivarnos para poder seguir adelante: Ramiro Alves, Gerardo Andrés Luna, Sebastián Silva y Daniel Frias, quien nos dio una mano para que podamos finalizar nuestro blog.
